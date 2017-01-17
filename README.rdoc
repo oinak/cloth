@@ -1,0 +1,32 @@
+== README
+
+Implementar un catálogo de ropa con las siguientes características:
+
+- Un panel de administración que hará las veces de backend en el que se podrán
+  dar de alta prendas y categorizarlas por tamaño, color, tipo...
+- Una página para visualizar dicho catálogo y poder filtrar y añadir prendas a
+  la lista de favoritas. No hace falta poner énfasis en el diseño, con algo de
+  estructura vale.
+- Ambas partes se comunicarán vía API.
+
+No es necesario hacer login para ver el catálogo, pero sí existe la opción
+de hacer login y poder seleccionar productos favoritos. No es necesario
+registro, con tener usuarios metidos a mano en BBDD es suficiente.  En el
+panel de administración no es necesario hacer login.  Las características
+de la prenda serán:
+
+- N Fotos (una de ellas tomada como foto de catálogo)
+- Talla
+- Color
+- Tipo de prenda
+- Precio
+- Marca
+
+La base de datos a usar para el backend es de libre elección, pero se
+valorará el uso de una no relacional (pese a que el proyecto en sí es
+bastante sencillo).  Con tener el proyecto subido a algún repositorio al
+que tengamos acceso es suficiente, pero tenerlo subido a alguna plataforma
+como Heroku es un plus.
+
+
+

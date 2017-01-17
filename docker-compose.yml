@@ -1,0 +1,22 @@
+
+version: '2'
+services:
+  app: &runtime
+    image: rails:4.2
+    hostname: cloth
+    domainname: cloth.acidtango.com
+    command: "./start"
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+      - .bundle:/usr/src/app/.bundle
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment: &env
+      BUNDLE_JOBS: 4
+      BUNDLE_PATH: /usr/src/app/.bundle
+      BUNDLE_APP_CONFIG: /usr/src/app/.bundle
+  db:
+    image: mongo
