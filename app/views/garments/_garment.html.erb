@@ -1,0 +1,12 @@
+<article class='garment'>
+  <div class='actions'>
+    Edit | Delete
+  </div>
+  <b><%= garment.name  %></b> [<%= garment.sku %>] <br>
+  <b>Color:</b> <%= garment.color %> <br>
+  <b>Kind:</b>  <%= garment.kind  %> <br>
+  <b>Size:</b>  <%= garment.size  %> <br>
+
+  <b>Price:</b> <%= humanized_money_with_symbol garment.price %> <br>
+  <b>Brand:</b> <%= garment.brand %>
+</article>
