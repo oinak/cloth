@@ -1,0 +1,53 @@
+// to be used in base/_variables
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+
+// form font-awesome gem
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+
+// thoughbot UX stack
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+@import "garments";
+
+html.turbolinks-progress-bar::before {
+  background-color: $action-color !important;
+  height: 3px !important;
+}
+
+body {
+  margin: 0em;
+  padding: 10px;
+
+  .alert{
+     width: 100%;
+     margin: 2em auto;
+     padding: .5em;
+     text-align: center;
+     a {
+       font-weight: bold;
+     }
+  }
+  .alert-notice{
+    background-color: lighten($action-color, 20%);
+    color: white;
+  }
+  .alert-alert{
+    background-color: lighten($warning-color, 20%);
+    color: black;
+  }
+  .alert-success{
+    background-color: lighten($success-color, 20%);
+    color: white;
+  }
+  .alert-error{
+    background-color: lighten($danger-color, 20%);
+    color: white;
+  }
+
+  #main {
+    @include outer-container(90%);
+  }
+}
