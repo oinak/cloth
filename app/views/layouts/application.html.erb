@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <section class="authentication">
+    <%= render 'authentication/links' %>
+  </section>
+  <section id='main'>
+    <%= yield %>
+  </section>
 </body>
 </html>

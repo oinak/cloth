@@ -7,6 +7,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create!(
+  [
+    { username: 'admin', password: 'secret' },
+    { username: 'jane', password: '123456' }
+  ]
+)
+
 Garment.create!(
   [
     { sku:   '000_001',
