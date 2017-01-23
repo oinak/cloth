@@ -1,6 +1,11 @@
 <article class='garment'>
   <div class='actions'>
-    Edit | Delete
+    <%= link_to(t('.edit'), edit_garment_path(garment)) %> |
+    <%= link_to(t('.delete'), garment_path(garment),
+                method: :delete,
+                data: { confirm: t('.comfirm_delete') },
+                class: 'danger'
+               ) %>
   </div>
   <b><%= garment.name  %></b> [<%= garment.sku %>] <br>
   <b>Color:</b> <%= garment.color %> <br>

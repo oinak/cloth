@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  garments:
+    index:
+      new: New garment
+      title: Garments Admin
+    new:
+      create: Create a new Garment
+    edit:
+      update_html: 'Edit <i>%{name}<i>'
+    garment:
+      comfirm_delete: Are you sure you want to delete this garment?
+      delete: Delete
+

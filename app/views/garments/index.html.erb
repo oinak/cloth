@@ -1,7 +1,8 @@
 
-<h1>
-  Hola <%= @current_user.try :username %>
-</h1>
+<h1> <%= t('.title') %></h1>
 <section id='garments'>
+  <div class='actions'>
+    <%= link_to t('.new'), new_garment_path %>
+  </div>
   <%= render @garments %>
 </section>

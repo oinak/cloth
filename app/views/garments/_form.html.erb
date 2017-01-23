@@ -1,0 +1,48 @@
+<%= form_for @garment do |f| %>
+
+  <% if @garment.errors.any? %>
+    <!-- replace with simple_form inline errors -->
+    <div id="error_explanation">
+      <h2>Error</h2>
+      <p>
+        <%= pluralize(@garment.errors.count, "error") %>
+        prohibited this model from being saved:
+      </p>
+      <ul>
+      <% @garment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= f.label :sku %>
+    <%= f.text_field :sku %>
+  </div>
+  <div class='field'>
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+  <div class='field'>
+    <%= f.label :kind %>
+    <%= f.text_field :kind %>
+  </div>
+  <div class='field'>
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+  <div class='field'>
+    <%= f.label :price %>
+    <%= f.number_field :price, min: 0, step: 0.01 %>
+  </div>
+  <div class='field'>
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+  <%= f.submit %>
+<% end %>
